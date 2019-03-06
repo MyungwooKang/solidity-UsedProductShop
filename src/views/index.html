@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>dapp</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="page-header">
+        <h1>Product list<h1>
+      </div>
+      <div>
+        <input type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registModal" value="regist product" />
+        <div id="ownerMenu" class="row">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div id="contents" class="row">
+    </div>
+  </div>
+
+
+  <div id="registModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Regist your product</h4>
+        </div>
+        <div class="modal-body">
+          <label for="productTitle">Title</label>
+          <input type="text" class="form-control" id="productTitle" maxlength="10" placeholder="Name of this..?"/>
+          </br>
+          <label for="productPrice">Price</label>
+          <input type="text" class="form-control" id="productPrice" maxlength="3" placeholder="How much..? (eth)"/>
+          </br>
+          <label for="productDescription">Description</label>
+          <input type="text" class="form-control" id="productDescription" maxlength="30" placeholder="Explain it to us"/>
+          </br>
+          <label for="productImageURL">Image URL</label>
+          <input type="text" class="form-control" id="productImageURL" maxlength="300" placeholder="http://your.image.url"/>
+          </br>
+          <label for="sellerPhone">Cell phone number</label>
+          <input type="text" class="form-control" id="sellerPhone" maxlength="100" placeholder="Your cell phone number"/>
+          </br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="okRegist" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="reserveModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Reserve this product</h4>
+        </div>
+        <div class="modal-body">
+          <label for="homeAddress">Address</label>
+          <input type="text" class="form-control" id="homeAddress" maxlength="100" placeholder="Home address for delivery."/>
+          </br>
+          <label for="buyerPhone">Cell phone number</label>
+          <input type="text" class="form-control" id="buyerPhone" maxlength="100" placeholder="Your cell phone number"/>
+          </br>
+          <input type="hidden" class="form-control" id="reserveProductId" maxlength="100"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="okReserve" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="deliverModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Set trackingNumber product</h4>
+        </div>
+        <div class="modal-body">
+          <label for="trackingNumber">Tracking number</label>
+          <input type="text" class="form-control" id="trackingNumber" maxlength="100" placeholder="Please enter your shipment number after shipment."/>
+          </br>
+          <input type="hidden" class="form-control" id="reserveProductId2" maxlength="100"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="okDeliver" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <!-- jquery -->
+  <script src="lib/js/jquery.min.js"></script>
+  <!-- web3 -->
+  <script src="lib/js/web3.min.js"></script>
+  <!-- truffleocontract -->
+  <script src="lib/js/truffle-contract.js"></script>
+  <!-- bootstrap -->
+  <script src="lib/js/bootstrap.min.js"></script>
+  <!-- web3 js -->
+  <!-- <script src="lib/js/web3.min.js"></script> -->
+  <!-- my script -->
+  <script src="js/message.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+const STATE_AVAILABLE_CLASS = "bg-info";
+const STATE_RESERVE_DELIVERY_CLASS = "bg-warning";
+const STATE_COMPLETE_CLASS = "bg-danger";
+const STATE_PROBLEM_CLASS = "bg-danger";
+const STATE_AVAILABLE_MESSAGE = "Available";
+const STATE_RESERVE_MESSAGE = "Reserved";
+const STATE_DELIVERY_MESSAGE = "Delivering...";
+const STATE_COMPLETE_MESSSAGE = "Sold out";
+const STATE_PROBLEM_MESSAGE = "Suspend";

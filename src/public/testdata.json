@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "fst",
+    "img": "img/sae.jpg",
+    "state": 0,
+    "description": "중고 1"
+  },{
+    "id": 1,
+    "name": "sec",
+    "img": "img/sae.jpg",
+    "state": 1,
+    "description": "Scottish Terrier"
+  },{
+    "id": 2,
+    "name": "trd",
+    "img": "img/sae.jpg",
+    "state": 2,
+    "description": "ㅁㄴㅇimg Terrier"
+  },{
+    "id": 3,
+    "name": "f",
+    "img": "img/sae.jpg",
+    "state": 3,
+    "description": "ㅁㄴㅇimg Terrier"
+  }
+]
